@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - prints single digits in base 10
+ * main - print the lowercase alphabet in reverse using putchar
  * Return: 0
  */
 int main(void)
 {
-	int num;
+	char letter = 'z';
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
+	while (letter >= 'a')
+	{
+		putchar(letter);
+		letter--;
+	}
 
 	putchar('\n');
-
 	return (0);
 }
