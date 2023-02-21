@@ -1,20 +1,29 @@
 #include <stdio.h>
 
+/**
+ * main - Prints the first 52 fibonacci numbers
+ * Return: Nothing!
+ */
+
 int main()
 {
-	int i, n = 50;
-	long int fib1 = 1, fib2 = 2, fib;
+	int i = 0;
+	long j = 1, k  = 2;
 
-	printf("'%ld, %ld", fib1, fib2);
-
-	for (i = 3; i <= n; i++)
+	while (i < 50)
 	{
-		fib = fib1 + fib2;
-		printf(", %ld", fib);
-		fib1 = fib2;
-		fib2 = fib;
+		if (i == 0)
+			printf("%ld", j);
+		else if (i == 1)
+			printf(", %ld", k);
+		else
+		{
+			k += j;
+			j = k - j;
+			printf(", %ld", k);
+		}
+		++i;
 	}
 	printf("\n");
-
-	return 0;
+	return (0);
 }
