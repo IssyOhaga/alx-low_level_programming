@@ -1,0 +1,22 @@
+_table.c:10:2: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘for’
+   10 |  for (num = 0; num <= 9; num++)
+      |  ^~~
+9-times_table.c:10:20: error: statement with no effect [-Werror=unused-value]
+   10 |  for (num = 0; num <= 9; num++)
+      |                ~~~~^~~~
+9-times_table.c:10:31: error: expected ‘;’ before ‘)’ token
+   10 |  for (num = 0; num <= 9; num++)
+      |                               ^
+      |                               ;
+9-times_table.c:10:31: error: expected statement before ‘)’ token
+9-times_table.c:19:4: error: ‘prod’ undeclared (first use in this function)
+   19 |    prod = num * mult;
+      |    ^~~~
+9-times_table.c:19:4: note: each undeclared identifier is reported only once for each function it appears in
+9-times_table.c:27:17: error: expected ‘;’ before ‘}’ token
+   27 |   _putchar('\n')
+      |                 ^
+      |                 ;
+   28 |  }
+      |  ~               
+cc1: all warnings being treated as ...
