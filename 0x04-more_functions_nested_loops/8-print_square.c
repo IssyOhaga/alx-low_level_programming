@@ -1,7 +1,16 @@
 #include "main.h"
 
 /**
- * print_square - prints a square, followed by a new line
+ * print_square - function declaration
+ * Description: prints a square of hash symbolds
+ * @size: the size of the square
+ *Return: void
+ */
+
+void print_square(int size);
+
+/**
+ * print_square - function declaration
  * Description: print a square of hash
  * @size: the square size
  * Return: void
