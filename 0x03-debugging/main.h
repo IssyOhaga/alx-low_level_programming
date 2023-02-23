@@ -9,4 +9,4 @@ void print_remaining days(int, int, int);
 int convert_day(int, int);
 void print_times_table(int n);
 
-#endif /*MAIN_H */
+#endif
