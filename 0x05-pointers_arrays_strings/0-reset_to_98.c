@@ -9,7 +9,7 @@
 void reset_to_98(int *n);
 
 /**
- * reet_to_98 - function definition
+ * reset_to_98 - function definition
  * Description: resets value to 98
  * @n: the pointer integer
  * Return: void
