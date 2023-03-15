@@ -22,6 +22,29 @@ char *argstostr(int ac, char **av);
 
 char *argstostr(int ac, char **av)
 {
+	#include <stdlib.h>
+#include <string.h>
+#include "main.h"
+
+/**
+ * argstostr - function declaration
+ * @ac: no of args
+ * @av: array of pointer
+ * Return: char type
+ */
+
+char *argstostr(int ac, char **av);
+
+/**
+ * argstostr - function definition
+ * @ac: number of arguments
+ * @av: array of pointers to argumnets
+ * Description: Return NULL of pointer to string
+ * Return: NULL or a pointer to a string
+ */
+
+char *argstostr(int ac, char **av)
+{
 	int row, column, len = 0, total_len = 0;
 	char *str;
 
@@ -33,7 +56,6 @@ char *argstostr(int ac, char **av)
 		len = strlen(av[row]);
 		total_len += len + 1;
 	}
-	printf("total_len = %d\n", total_len);
 
 	str = (char *) malloc(total_len * sizeof(char));
 	if (str == NULL)
@@ -45,7 +67,6 @@ char *argstostr(int ac, char **av)
 		for (column = 0; av[row][column] != '\0'; column++)
 		{
 			str[len++] = av[row][column];
-			printf("len = %d\n", len);
 		}
 		str[len++] = '\n';
 	}
