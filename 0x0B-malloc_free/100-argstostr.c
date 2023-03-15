@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * argstostr - function declaration
@@ -22,29 +21,7 @@ char *argstostr(int ac, char **av);
 
 char *argstostr(int ac, char **av)
 {
-	#include <stdlib.h>
-#include <string.h>
-#include "main.h"
 
-/**
- * argstostr - function declaration
- * @ac: no of args
- * @av: array of pointer
- * Return: char type
- */
-
-char *argstostr(int ac, char **av);
-
-/**
- * argstostr - function definition
- * @ac: number of arguments
- * @av: array of pointers to argumnets
- * Description: Return NULL of pointer to string
- * Return: NULL or a pointer to a string
- */
-
-char *argstostr(int ac, char **av)
-{
 	int row, column, len = 0, total_len = 0;
 	char *str;
 
