@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * _putchar - prints/writes character
- * @character: The character to print
- * Return: 1, success, -1 error
+ * _putchar - prints character
+ * @character: charater to print
+ * Return: 1. On success, -1 error
  */
 
 int _putchar(char character)
