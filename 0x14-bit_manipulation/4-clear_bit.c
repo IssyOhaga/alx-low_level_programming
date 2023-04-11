@@ -2,6 +2,7 @@
 
 /**
  * clear_bit - sets the value of a bit to 0
+ * at a given index
  * @n: pointer of unsigned long int
  * @index: index of bit
  *
@@ -9,14 +10,14 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int i;
+	unsigned int m;
 
 	if (index > 63)
 		return (-1);
 
-	i = 1 << index;
+	m = 1 << index;
 
-	if (*n & i)
+	if (*n & m)
 		*n ^= i;
 
 	return (1);
