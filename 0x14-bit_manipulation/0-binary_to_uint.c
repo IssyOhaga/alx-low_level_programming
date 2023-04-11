@@ -19,7 +19,7 @@ unsigned in binary_to_unit(const char *b)
 	{
 		if (b[a] < '0' || b[a] > '1')
 			return (0);
-		decimalValue = 2 * decimalValue + b[a] - '0');
+		decimalValue = 2 * decimalValue + (b[a] - '0');
 	}
 	return (decimalValue);
 }
