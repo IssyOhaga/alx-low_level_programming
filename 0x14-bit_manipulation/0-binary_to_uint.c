@@ -11,15 +11,20 @@
 unsigned int binary_to_unit(const char *b)
 {
 	int i;
-	unsigned int decimalValue = 0;
+	unsigned int total, power;
 
-	if (!b)
+	if (b == NULL)
 		return (0);
 	for (i = 0; b[i]; i++)
 	{
-		if (b[i] < '0' || b[i] > '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		decimalValue = 2 * decimalValue + (b[i] - '0');
 	}
-	return (decimalValue);
+	for (power = 1, total = 0, i--; i >= 0; i--, power *= 2)
+	{
+		if (b[i] == '1')
+			total += power;
+	}
+
+	return (total);
 }
