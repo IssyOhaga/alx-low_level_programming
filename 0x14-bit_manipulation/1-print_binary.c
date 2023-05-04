@@ -9,10 +9,9 @@
 
 void print_binary(unsigned long int n)
 {
-int i, count = 0;
+int i, num0nes = 0;
 unsigned long int current;
 
-{
 for (i = 63; i >= 0; i--)
 {
 current = n >> i;
@@ -20,9 +19,10 @@ current = n >> i;
 if (current & 1)
 {
 _putchar('1');
-count++;
+num0nes++;
 }
-else if (count)
+else if (num0nes)
 _putchar('0');
 }
+if (!num0nes)
 }
