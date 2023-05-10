@@ -3,33 +3,34 @@
 /**
  * read_textfile - reads text and prints to STDOUT
  * @filename: file name pointer
- * @letters: number of characters to read
+ * @letters: number of letters printed
  *
  * Return: 0 if file name is NULL
- *
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-ssize_t op, rd, wr;
-char *buffer;
+int fd, n_read;
+char *buf;
 
 if (filename == NULL)
-	return (0);
+return (0);
 
-op = open(filename, O_RDONLY;
-rd = read(op, buffer, letters);
-wr = write(STDOUT_FILENO, buffer, rd);
+buf = malloc(sizeof(char) * (letters + 1));
+if (buf == null)
+return (0);
 
-if (op == -1 || rd == -1 || wr == -1 | wr != rd)
+fd = open(filename, O_RDONLY);
+if (fd == -1)
 {
-free(buffer);
+free(buf);
 return (0);
 }
 
-free(buffer);
-close(op);
-
-return (wr);
+n_read = read(fd, buf, letters);
+if (n_read == -1)
+{
+free(buf);
+close(fd);
+return (0);
 }
-
