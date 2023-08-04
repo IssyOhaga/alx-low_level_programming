@@ -28,4 +28,4 @@ my_num += (*b++ - '0');
 return (my_num);
 }
 
-#endig /* BINARY_H */
+#endif /* BINARY_H */
