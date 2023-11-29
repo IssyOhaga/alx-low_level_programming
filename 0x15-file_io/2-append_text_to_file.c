@@ -4,16 +4,16 @@
 #include <unistd.h>
 
 /**
- * append_text_to_file - appends text to end of a file
+ * append_text_to_file - appends text to the end of a file
  *
  * This function opens a file with write-only and append mode,
- * and appends the given text to the end of the file. If the file
- * does not exist,
+ * and appends the given text to the end of the file.
+ * If the file does not exist.
  *
- * @filename: name of file to append to
- * @text_content - text to append to the file
+ * @filename: name of the file to append to
+ * @text_content: text to append to the file.
  *
- * Return: 1 on succcess, -1 on failure
+ * Return: 1 on success, on failure -1
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
@@ -35,7 +35,7 @@ bytes_written = write(fd, text_content, nbytes);
 if (bytes_written == -1)
 {
 close(fd);
-return (-1)
+return (-1);
 }
 close(fd);
 return (1);
