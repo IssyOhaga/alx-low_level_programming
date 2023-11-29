@@ -16,7 +16,7 @@ return (-1);
 
 if (text_content != NULL)
 {
-for (len = 0; text_contenet[len];)
+for (len = 0; text_content[len];)
 	len++;
 }
 
